@@ -155,6 +155,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ClassLibrary1": "1.0.0",
           "ViewModel": "1.0.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -164,6 +165,16 @@
         },
         "runtime": {
           "bin/placeholder/AndroidFileManager.dll": {}
+        }
+      },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
         }
       },
       "ViewModel/1.0.0": {
@@ -331,6 +342,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ClassLibrary1": "1.0.0",
           "ViewModel": "1.0.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -340,6 +352,16 @@
         },
         "runtime": {
           "bin/placeholder/AndroidFileManager.dll": {}
+        }
+      },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
         }
       },
       "ViewModel/1.0.0": {
@@ -507,6 +529,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ClassLibrary1": "1.0.0",
           "ViewModel": "1.0.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -516,6 +539,16 @@
         },
         "runtime": {
           "bin/placeholder/AndroidFileManager.dll": {}
+        }
+      },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
         }
       },
       "ViewModel/1.0.0": {
@@ -683,6 +716,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ClassLibrary1": "1.0.0",
           "ViewModel": "1.0.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -692,6 +726,16 @@
         },
         "runtime": {
           "bin/placeholder/AndroidFileManager.dll": {}
+        }
+      },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
         }
       },
       "ViewModel/1.0.0": {
@@ -1026,6 +1070,11 @@
       "path": "../AndroidFileManager/AndroidFileManager.csproj",
       "msbuildProject": "../AndroidFileManager/AndroidFileManager.csproj"
     },
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "path": "../../ClassLibrary1/ClassLibrary1.csproj",
+      "msbuildProject": "../../ClassLibrary1/ClassLibrary1.csproj"
+    },
     "ViewModel/1.0.0": {
       "type": "project",
       "path": "../../ViewModel/ViewModel.csproj",
@@ -1120,8 +1169,26 @@
     {
       "code": "NU1201",
       "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
       "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0/win"
       ]
@@ -1138,8 +1205,26 @@
     {
       "code": "NU1201",
       "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
       "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0/win-x86"
       ]

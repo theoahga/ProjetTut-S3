@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FxyvisMMyZO72/ae8wMzyWFuWHMitjm929WlOhqFu76hS/e8AgmEGimzG/t3HYA4HY+lV9p6tb0zCxyzN+mgXw==",
+  "dgSpecHash": "UvlW/xdPChSkBChh1mS4MYFrKFIFH+zI3C1HiwqtzxMTfqhkmwLTDW5lsvDxCk2z0bIKRykFGGaZQDG++/nogg==",
   "success": false,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,15 @@
       "level": "Error",
       "message": "Le projet ViewModel n'est pas compatible avec monoandroid11.0 (MonoAndroid,Version=v11.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ViewModel",
+      "targetGraphs": [
+        "MonoAndroid,Version=v11.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec monoandroid11.0 (MonoAndroid,Version=v11.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
       "targetGraphs": [
         "MonoAndroid,Version=v11.0"
       ]

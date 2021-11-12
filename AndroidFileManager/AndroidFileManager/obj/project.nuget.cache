@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3q8EvJ2PxKpEcNA2tbQxrw5PvNVvP8fzMWqTKSlxYvZ9VTaa1TJXowS4nHlGSQ3jZ/b+yE/P08MLuKqXzVQm/Q==",
+  "dgSpecHash": "vpt/fNzxQjGw9bTziNV+xFNHnQRITiCn/Rnoq72yklKFqzXqEYXbS4HliMBYVJhb5m58mTXwFFC3S0jzV4//ZQ==",
   "success": false,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,15 @@
       "level": "Error",
       "message": "Le projet ViewModel n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ViewModel",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
       ]

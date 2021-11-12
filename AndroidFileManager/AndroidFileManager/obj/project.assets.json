@@ -64,6 +64,16 @@
           "buildTransitive/Xamarin.Forms.targets": {}
         }
       },
+      "ClassLibrary1/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary1.dll": {}
+        }
+      },
       "ViewModel/1.0.0": {
         "type": "project",
         "framework": "Unsupported,Version=v0.0",
@@ -535,6 +545,11 @@
         "xamarin.forms.nuspec"
       ]
     },
+    "ClassLibrary1/1.0.0": {
+      "type": "project",
+      "path": "../../ClassLibrary1/ClassLibrary1.csproj",
+      "msbuildProject": "../../ClassLibrary1/ClassLibrary1.csproj"
+    },
     "ViewModel/1.0.0": {
       "type": "project",
       "path": "../../ViewModel/ViewModel.csproj",
@@ -543,6 +558,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "ClassLibrary1 >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "ViewModel >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
@@ -584,6 +600,9 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "projectReferences": {
+            "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj": {
+              "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj"
+            },
             "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ViewModel\\ViewModel.csproj": {
               "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ViewModel\\ViewModel.csproj"
             }
@@ -635,6 +654,15 @@
       "level": "Error",
       "message": "Le projet ViewModel n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ViewModel",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ClassLibrary1 n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ClassLibrary1",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
       ]
