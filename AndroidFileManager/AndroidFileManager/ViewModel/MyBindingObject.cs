@@ -12,7 +12,7 @@ namespace AndroidFileManager
             listFilesDoc.Add("dede");
             listFilesDoc.Add("dede");
             listFilesDoc.Add("dede");
-            listFilesDoc.Add("dede");
+            //listFilesDoc.Add("dede");
             listFilesDoc.Add("dede");
         }
 
