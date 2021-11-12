@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidFileManager", "Andro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{3E5F45BA-12AD-43C0-9529-ECA78C09A516}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,18 @@ Global
 		{3E5F45BA-12AD-43C0-9529-ECA78C09A516}.Release|iPhone.Build.0 = Release|Any CPU
 		{3E5F45BA-12AD-43C0-9529-ECA78C09A516}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{3E5F45BA-12AD-43C0-9529-ECA78C09A516}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|iPhone.Build.0 = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{CCED0143-8E01-4F64-AD5B-58EFA0FB4954}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:AndroidFileManager"
              x:Class="AndroidFileManager.MainPage">
 
-        
+
     <AbsoluteLayout>
         <Frame BackgroundColor="LightSeaGreen" Padding="5" CornerRadius="0" AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
             <Label Text="Mon gestionnaire de fichiers" HorizontalTextAlignment="Start" FontSize="24"/>

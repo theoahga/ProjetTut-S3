@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "5Vpp7EU7JJP6Kt1QoNn+Cj+I5qiBjVteMdmwtQjAUyFFJyVUxhdq3bkkC71wuK3o1Bhov/tDJyMS1W/Gnka9xw==",
-  "success": true,
+  "dgSpecHash": "3q8EvJ2PxKpEcNA2tbQxrw5PvNVvP8fzMWqTKSlxYvZ9VTaa1TJXowS4nHlGSQ3jZ/b+yE/P08MLuKqXzVQm/Q==",
+  "success": false,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clere\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -10,5 +10,15 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

@@ -63,6 +63,16 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "ViewModel/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModel.dll": {}
+        }
       }
     }
   },
@@ -524,11 +534,17 @@
         "xamarin.forms.5.0.0.2012.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../../ViewModel/ViewModel.csproj",
+      "msbuildProject": "../../ViewModel/ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "ViewModel >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
     ]
@@ -567,7 +583,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ViewModel\\ViewModel.csproj": {
+              "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ViewModel\\ViewModel.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -608,5 +628,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec netstandard2.0 (.NETStandard,Version=v2.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
 }

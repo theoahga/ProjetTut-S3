@@ -1,12 +1,49 @@
 {
   "version": 2,
-  "dgSpecHash": "xxqjDGCSa7+kSrF0a+4/Os00SypUCdSkW7BkFXia4Sk+SVbDNUSGxSGauixo3LepsS2uuzYtcT6crAW3+U5G+Q==",
-  "success": true,
+  "dgSpecHash": "3wA7hlfDlt78QxsrZlGRs30XYTJS441sN8ao/UzD+cUqAqDh+Hn0WzhAFEGpbZ+zaZfd/jr0tT6tQRZJ+7bNfQ==",
+  "success": false,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.iOS\\AndroidFileManager.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x64"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
+      "libraryId": "ViewModel",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

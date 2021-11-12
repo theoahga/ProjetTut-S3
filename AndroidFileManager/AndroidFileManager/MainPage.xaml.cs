@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 namespace AndroidFileManager
 {
     public partial class MainPage : ContentPage
@@ -17,6 +18,7 @@ namespace AndroidFileManager
         public MainPage()
         {
             InitializeComponent();
+            BindingContext = new MyBindingObject();
         }
 
         /*private void Documents_Clicked(object sender, EventArgs e)
