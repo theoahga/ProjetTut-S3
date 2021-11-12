@@ -2149,11 +2149,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
+      "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
       "projectName": "AndroidFileManager.Android",
-      "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
+      "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
       "packagesPath": "C:\\Users\\clere\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager.Android\\obj\\",
+      "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2176,8 +2176,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj": {
-              "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj"
+            "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj": {
+              "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj"
             }
           }
         }

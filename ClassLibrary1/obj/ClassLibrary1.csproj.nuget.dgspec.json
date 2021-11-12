@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\ClassLibrary1\\ClassLibrary1.csproj": {}
+    "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\ClassLibrary1\\ClassLibrary1.csproj": {
+    "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj",
         "projectName": "ClassLibrary1",
-        "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\ClassLibrary1\\ClassLibrary1.csproj",
+        "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\ClassLibrary1.csproj",
         "packagesPath": "C:\\Users\\clere\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\ClassLibrary1\\obj\\",
+        "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -541,11 +541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
+      "projectUniqueName": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
       "projectName": "AndroidFileManager",
-      "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
+      "projectPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\AndroidFileManager.csproj",
       "packagesPath": "C:\\Users\\clere\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\2021_ProjetTut_S3\\AndroidFileManager\\AndroidFileManager\\obj\\",
+      "outputPath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

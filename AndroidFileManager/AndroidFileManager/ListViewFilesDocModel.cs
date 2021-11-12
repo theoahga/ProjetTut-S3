@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace ViewModel
 {
-    class ListViewFilesDocModel: ContentPage
+    public class ListViewFilesDocModel: ContentPage
     {
         public ObservableCollection<string> FilesDoc { get; set; }
 
