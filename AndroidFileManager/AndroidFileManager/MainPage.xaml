@@ -4,9 +4,6 @@
              xmlns:local="clr-namespace:AndroidFileManager"
              x:Class="AndroidFileManager.MainPage">
 
-    <ContentPage.BindingContext>
-        <local:ListViewFilesDocModel>
-    </ContentPage.BindingContext>
         
     <AbsoluteLayout>
         <Frame BackgroundColor="LightSeaGreen" Padding="5" CornerRadius="0" AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
