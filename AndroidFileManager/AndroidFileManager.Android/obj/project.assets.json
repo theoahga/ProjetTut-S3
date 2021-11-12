@@ -975,23 +975,14 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "ClassLibrary1": "1.0.0"
+          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "compile": {
           "bin/placeholder/AndroidFileManager.dll": {}
         },
         "runtime": {
           "bin/placeholder/AndroidFileManager.dll": {}
-        }
-      },
-      "ClassLibrary1/1.0.0": {
-        "type": "project",
-        "framework": "Unsupported,Version=v0.0",
-        "compile": {
-          "bin/placeholder/ClassLibrary1.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ClassLibrary1.dll": {}
         }
       }
     }
@@ -2141,11 +2132,6 @@
       "type": "project",
       "path": "../AndroidFileManager/AndroidFileManager.csproj",
       "msbuildProject": "../AndroidFileManager/AndroidFileManager.csproj"
-    },
-    "ClassLibrary1/1.0.0": {
-      "type": "project",
-      "path": "../../ClassLibrary1/ClassLibrary1.csproj",
-      "msbuildProject": "../../ClassLibrary1/ClassLibrary1.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2211,16 +2197,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Le projet ClassLibrary1 n'est pas compatible avec monoandroid11.0 (MonoAndroid,Version=v11.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ClassLibrary1",
-      "targetGraphs": [
-        "MonoAndroid,Version=v11.0"
-      ]
-    }
-  ]
+  }
 }

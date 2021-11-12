@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using ViewModel;
+
 
 
 
@@ -20,6 +20,7 @@ namespace AndroidFileManager
         public MainPage()
         {
             InitializeComponent();
+
             BindingContext = new MyBindingObject();
         }
 

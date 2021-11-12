@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "5e1DIlbnAHjVkh2W3oZzNvmYx1NiH8OKdf+0o3p4bKSYCzeWiDd0aPvRF2H0ShOlfM91QmPGQy216b/3dtJS3g==",
-  "success": false,
+  "dgSpecHash": "UDksS8pzLrvwrfqmAjCausIQj2NLnwRG7SKQ7grf29aKsQPrjkSojrddON02C1RLXSkZ2/etiAh0iEzaOO75uQ==",
+  "success": true,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\clere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
@@ -54,15 +54,5 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Le projet ClassLibrary1 n'est pas compatible avec monoandroid11.0 (MonoAndroid,Version=v11.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ClassLibrary1",
-      "targetGraphs": [
-        "MonoAndroid,Version=v11.0"
-      ]
-    }
-  ]
+  "logs": []
 }
