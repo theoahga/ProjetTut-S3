@@ -14,6 +14,7 @@ namespace AndroidFileManager
             listFilesDoc.Add("dede");
             //listFilesDoc.Add("dede");
             listFilesDoc.Add("dede");
+            //Louis le gros baiseur
         }
 
         private ObservableCollection<string> listFilesDoc { get; set; }
