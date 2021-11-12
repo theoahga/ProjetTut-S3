@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LBMNUCJaVUA7pqT8PDYjEuREXDsJaDUnhcbobaCuUox9qruyLDkyqvMkL5+52mWgU0nbTtlgB9eyqVUn6nYUiA==",
+  "dgSpecHash": "xXpIAiT1AN0YqAbs+WZzsCzLSz6nL+T1n96RVn5uhbACTX2VXzztOF3UTiwvWXPGiZqcoyKTMj7nZDp7OPSGYw==",
   "success": false,
   "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.iOS\\AndroidFileManager.iOS.csproj",
   "expectedPackageFiles": [
@@ -12,28 +12,10 @@
     {
       "code": "NU1201",
       "level": "Error",
-      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0). Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ViewModel",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
       "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0). Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ClassLibrary1",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ViewModel",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
       ]
     },
     {
@@ -48,28 +30,10 @@
     {
       "code": "NU1201",
       "level": "Error",
-      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ViewModel",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
       "message": "Le projet ClassLibrary1 n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Le projet ClassLibrary1 prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
       "libraryId": "ClassLibrary1",
       "targetGraphs": [
         "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Le projet ViewModel n'est pas compatible avec xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Le projet ViewModel prend en charge : netcoreapp3.1 (.NETCoreApp,Version=v3.1)",
-      "libraryId": "ViewModel",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
       ]
     },
     {
