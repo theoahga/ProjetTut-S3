@@ -15,7 +15,7 @@
 
 
         
-        <ListView x:Name="listViewFiles" ItemsSource="{Binding FilesDoc}">
+        <ListView x:Name="listViewFiles" ItemsSource="{Binding listFilesDoc}">
         </ListView>
 
 
