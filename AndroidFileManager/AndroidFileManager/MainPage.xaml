@@ -14,10 +14,16 @@
         <Label Text="Ici s'affichera le chemin du dossier dans lequel vous vous trouvez" VerticalTextAlignment="Center" TextColor="#202020" BackgroundColor="#E0E0E0" HorizontalOptions="Fill" HeightRequest="40" AbsoluteLayout.LayoutBounds="0,0.07,1,0.06" AbsoluteLayout.LayoutFlags="All"/>
 
 
+        <Frame>
+            <CollectionView ItemsSource="{Binding MyItems}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding .}"/>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
         
-        <ListView x:Name="listViewFiles" ItemsSource="{Binding listFilesDoc}">
-        </ListView>
-
 
         <Frame BackgroundColor="LightSeaGreen" Padding="1"  AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" >
 
