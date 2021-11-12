@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AndroidFileManager"
+             x:Class="AndroidFileManager.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ListViewFilesDocModel>
+    </ContentPage.BindingContext>
+        
+    <AbsoluteLayout>
+        <Frame BackgroundColor="LightSeaGreen" Padding="5" CornerRadius="0" AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Mon gestionnaire de fichiers" HorizontalTextAlignment="Start" FontSize="24"/>
+        </Frame>
+
+
+        <Label Text="Ici s'affichera le chemin du dossier dans lequel vous vous trouvez" VerticalTextAlignment="Center" TextColor="#202020" BackgroundColor="#E0E0E0" HorizontalOptions="Fill" HeightRequest="40" AbsoluteLayout.LayoutBounds="0,0.07,1,0.06" AbsoluteLayout.LayoutFlags="All"/>
+
+
+        
+        <ListView x:Name="listViewFiles" ItemsSource="{Binding FilesDoc}">
+        </ListView>
+
+
+        <Frame BackgroundColor="LightSeaGreen" Padding="1"  AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" >
+
+            <Grid Margin="3,0,3,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.32*"/>
+                    <ColumnDefinition Width="0.32*"/>
+                    <ColumnDefinition Width="0.32*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Vertical" >
+                    <Button ImageSource="ajouter_blanc.png" BackgroundColor="LightSeaGreen"/>
+                    <Label Text="Ajouter" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+                    <Button ImageSource="annuler_blanc.png" BackgroundColor="LightSeaGreen"/>
+                    <Label Text="Retour" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+                    <Button ImageSource="supprimer_blanc.png" BackgroundColor="LightSeaGreen"/>
+                    <Label Text="Supprimer" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </Grid>
+
+        </Frame>
+
+    </AbsoluteLayout>
+
+</ContentPage>
