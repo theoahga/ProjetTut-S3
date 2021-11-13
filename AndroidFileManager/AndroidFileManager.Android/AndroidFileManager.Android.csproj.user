@@ -4,5 +4,6 @@
     <SelectedDevice>HUAWEI DRA-L21</SelectedDevice>
     <ActiveDebugProfile>HUAWEI DRA-L21</ActiveDebugProfile>
     <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

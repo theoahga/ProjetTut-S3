@@ -68,8 +68,6 @@ C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\Android
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.csproj.AssemblyReference.cache
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
-C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\PageDetailDossier.xaml.g.cs
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.AssemblyInfoInputs.cache
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.AssemblyInfo.cs
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.csproj.CoreCompileInputs.cache
@@ -77,3 +75,6 @@ C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\Android
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.dll
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\ref\AndroidFileManager.dll
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.pdb
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\Views\PageDetailDossier.xaml.g.cs
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\Views\listPage.xaml.g.cs

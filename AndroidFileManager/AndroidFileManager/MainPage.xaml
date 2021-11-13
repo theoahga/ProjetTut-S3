@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AndroidFileManager"
-             x:Class="AndroidFileManager.MainPage">
+             x:Class="AndroidFileManager.MainPage"
+             Title="My Android FileManager">
 
 
     <AbsoluteLayout>
@@ -15,13 +16,31 @@
 
 
         <Frame>
-            <CollectionView ItemsSource="{Binding MyItems}">
-                <CollectionView.ItemTemplate>
+            <ListView ItemsSource="{Binding listFilesDoc}"
+                      HasUnevenRows="true"
+                      SeparatorVisibility="None"
+                      >
+                <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding .}"/>
+                        <ViewCell>
+                            <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       VerticalOptions="End"/>
+                            </Grid>
+                        </ViewCell>
                     </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                </ListView.ItemTemplate>
+            </ListView>
         </Frame>
         
 

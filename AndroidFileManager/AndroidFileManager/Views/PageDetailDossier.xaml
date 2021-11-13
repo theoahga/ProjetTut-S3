@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AndroidFileManager.PageDetailDossier">
+
+    <AbsoluteLayout>
+        <Frame BackgroundColor="LightSeaGreen" Padding="5" CornerRadius="0" AbsoluteLayout.LayoutBounds="0,0,1,0.07" AbsoluteLayout.LayoutFlags="All">
+            <Label Text="Mon gestionnaire de fichiers" HorizontalTextAlignment="Start" FontSize="24"/>
+        </Frame>
+
+
+        <Label Text="/Documents" VerticalTextAlignment="Center" TextColor="#202020" BackgroundColor="#E0E0E0" HorizontalOptions="Fill"  AbsoluteLayout.LayoutBounds="0,0.07,1,0.06" AbsoluteLayout.LayoutFlags="All"/>
+
+        <ScrollView  AbsoluteLayout.LayoutBounds="0,0.55,1,0.75" AbsoluteLayout.LayoutFlags="All" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33*"/>
+                    <ColumnDefinition Width="0.33*"/>
+                    <ColumnDefinition Width="0.33*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="160"/>
+                    <RowDefinition Height="160"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="word.png" BackgroundColor="Transparent"  />
+                    <Label Text="Conception.docx"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="excel.png" BackgroundColor="Transparent" />
+                    <Label Text="Calculs.xlsx"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="pdf.png" BackgroundColor="Transparent" />
+                    <Label Text="Compte-rendu.pdf"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="dossier.png" BackgroundColor="Transparent" />
+                    <Label Text="Projet tutoré"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="powerpoint.png" BackgroundColor="Transparent" />
+                    <Label Text="Présentation.pptx"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="css.png" BackgroundColor="Transparent" />
+                    <Label Text="Feuille de style.css"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="html.png" BackgroundColor="Transparent" />
+                    <Label Text="Code-source.html"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="js.png" BackgroundColor="Transparent" />
+                    <Label Text="Calendrier.js"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="2" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="txt.png" BackgroundColor="Transparent" />
+                    <Label Text="Notes.txt"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="3" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="texte.png" BackgroundColor="Transparent" />
+                    <Label Text="Etude.odt"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="dossier.png" BackgroundColor="Transparent" />
+                    <Label Text="JavaGame"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="3" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="mp3.png" BackgroundColor="Transparent" />
+                    <Label Text="Highway to Hell.mp3"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <StackLayout Grid.Column="0" Grid.Row="4" Orientation="Vertical" Margin="5,1,2,20">
+                    <Button ImageSource="autre.png" BackgroundColor="Transparent" />
+                    <Label Text="Debug"  HorizontalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+        
+
+        <Frame BackgroundColor="LightSeaGreen" Padding="1"  AbsoluteLayout.LayoutBounds="0,1,1,0.1" AbsoluteLayout.LayoutFlags="All" >
+
+            <Grid Margin="3,0,3,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.32*"/>
+                    <ColumnDefinition Width="0.32*"/>
+                    <ColumnDefinition Width="0.32*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Vertical" >
+                    <Button ImageSource="ajouter_blanc.png" BackgroundColor="LightSeaGreen"/>
+                    <Label Text="Ajouter" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical">
+                    <Button ImageSource="annuler_blanc.png" BackgroundColor="LightSeaGreen" Clicked="Retour_Clicked"/>
+                    <Label Text="Retour" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+                    <Button ImageSource="supprimer_blanc.png" BackgroundColor="LightSeaGreen"/>
+                    <Label Text="Supprimer" HorizontalOptions="Center" FontSize="12" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </Grid>
+
+        </Frame>
+        
+    </AbsoluteLayout>
+    
+</ContentPage>
