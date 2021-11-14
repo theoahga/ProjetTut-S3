@@ -20,5 +20,10 @@ namespace AndroidFileManager.Views
             
             BindingContext = new MyListViewModel();
         }
+
+        async void click_open_file(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PageDetailDossier());
+        }
     }
 }

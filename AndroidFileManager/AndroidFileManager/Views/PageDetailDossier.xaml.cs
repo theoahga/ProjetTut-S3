@@ -17,10 +17,7 @@ namespace AndroidFileManager
             InitializeComponent();
         }
 
-        private void Retour_Clicked(object sender, EventArgs e)
-        {
-        }
-
+       
         
     }
 }
