@@ -12,6 +12,7 @@ namespace AndroidFileManager
         public ObservableCollection<MyListModel> listFilesDoc { get; set; }
         
         private GetPermissions permi;
+
         public MyListViewModel()
         {
             listFilesDoc = new ObservableCollection<MyListModel>();
@@ -41,6 +42,5 @@ namespace AndroidFileManager
             }
         }
 
-        
     }
 }
