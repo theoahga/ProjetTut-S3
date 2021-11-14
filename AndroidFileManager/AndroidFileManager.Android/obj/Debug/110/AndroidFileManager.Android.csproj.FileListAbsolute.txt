@@ -3581,7 +3581,7 @@ C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Androi
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\AndroidFileManager.Android.csproj.CopyComplete
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\ouvrir_blanc.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\coller_blanc.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\copier_blanc.png
+C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\AndroidFileManager.Android.csproj.CopyComplete

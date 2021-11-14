@@ -18,7 +18,6 @@ namespace AndroidFileManager
         {
             InitializeComponent();
 
-            BindingContext = new MyListViewModel_documents();
         }
 
        

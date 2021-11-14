@@ -25,5 +25,6 @@ namespace AndroidFileManager.Views
         {
             await Navigation.PushAsync(new PageDetailDossier());
         }
+
     }
 }
