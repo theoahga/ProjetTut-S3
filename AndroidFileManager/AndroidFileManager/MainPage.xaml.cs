@@ -15,7 +15,7 @@ namespace AndroidFileManager
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MyListViewModel();
+            BindingContext = new MyListViewModel("");
         }
     }
 }

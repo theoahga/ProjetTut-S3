@@ -9,7 +9,8 @@
                       SeparatorVisibility="None"
                       AbsoluteLayout.LayoutBounds="0,0,1,1" 
                       AbsoluteLayout.LayoutFlags="All"
-                      >
+                      ItemTapped="ListView_ItemTapped"
+                      ItemSelected="ListView_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

@@ -1,6 +1,5 @@
 ﻿using AndroidFileManager.Data;
 using AndroidFileManager.Logic;
-using AndroidFileManager.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -12,29 +11,27 @@ namespace AndroidFileManager
     {
         public ObservableCollection<StoredElement> listFilesDoc { get; set; }
         
-        private GetPermissions permi;
+        
 
-        public MyListViewModel()
+        public MyListViewModel(string path)
         {
-            //listFilesDoc = new ObservableCollection<MyListModel>();
             listFilesDoc = new ObservableCollection<StoredElement>();
-            permi = new GetPermissions();
-            permi.GetStoragePermissions();
-            initialize();
+            initialize(path);
         }
 
 
-        public void initialize()
+        public void initialize(string path)
         {
+            string a = path;
             try
             {
 
                 
-                foreach (string pth in System.IO.Directory.GetDirectories("/storage/emulated/0"))
+                foreach (string pth in System.IO.Directory.GetDirectories(a))
                 {
                     listFilesDoc.Add(new Folder(pth));
                 }
-                foreach (string pth in System.IO.Directory.GetFiles("/storage/emulated/0"))
+                foreach (string pth in System.IO.Directory.GetFiles(a))
                 {
                     listFilesDoc.Add(new Logic.File(pth));
                 }

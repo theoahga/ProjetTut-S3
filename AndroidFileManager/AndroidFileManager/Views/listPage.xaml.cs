@@ -1,4 +1,4 @@
-﻿using AndroidFileManager.Models;
+﻿using AndroidFileManager.Logic;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,11 +14,10 @@ namespace AndroidFileManager.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class listPage : ContentPage
     {
-        public listPage()
+        public listPage(string path_base)
         {
-            InitializeComponent();         
-            
-            BindingContext = new MyListViewModel();
+            InitializeComponent();
+            BindingContext = new MyListViewModel(path_base);
         }
 
         async void click_open_file(object sender, EventArgs e)
@@ -26,5 +25,20 @@ namespace AndroidFileManager.Views
             await Navigation.PushAsync(new PageDetailDossier());
         }
 
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs i)
+        {
+            ((ListView)sender).SelectedItem = null;
+        }
+
+        private async void ListView_ItemSelected(object sender, SelectedPositionChangedEventArgs e)
+        {
+            var storedElement = ((ListView)sender).SelectedItem as StoredElement;
+            if (storedElement == null)
+            {
+                return;
+            }
+                
+            await Navigation.PushAsync(new listPage(storedElement.Name));
+        }
     }
 }

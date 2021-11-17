@@ -1,4 +1,5 @@
-﻿using AndroidFileManager.Views;
+﻿using AndroidFileManager.Data;
+using AndroidFileManager.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,10 +11,10 @@ namespace AndroidFileManager
         public App()
         {
             InitializeComponent();
-            //MainPage = new MainPage();                         //Ouvre la page de menu principal
-            //MainPage = new PageDetailDossier();                  //Ouvre la page de detail d'un dossier
-
-            MainPage = new NavigationPage(new listPage());
+            GetPermissions permi = new GetPermissions();
+            permi.GetStoragePermissions();
+            MainPage = new NavigationPage(new listPage("/storage/emulated/0"));
+            
         }
 
         protected override void OnStart()
