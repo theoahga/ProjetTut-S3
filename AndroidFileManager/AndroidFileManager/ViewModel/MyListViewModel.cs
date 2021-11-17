@@ -1,4 +1,5 @@
 ﻿using AndroidFileManager.Data;
+using AndroidFileManager.Logic;
 using AndroidFileManager.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -9,14 +10,16 @@ namespace AndroidFileManager
 {
     public class MyListViewModel
     {
-        public ObservableCollection<MyListModel> listFilesDoc { get; set; }
+        public ObservableCollection<StoredElement> listFilesDoc { get; set; }
         
         private GetPermissions permi;
 
         public MyListViewModel()
         {
-            listFilesDoc = new ObservableCollection<MyListModel>();
+            //listFilesDoc = new ObservableCollection<MyListModel>();
+            listFilesDoc = new ObservableCollection<StoredElement>();
             permi = new GetPermissions();
+            permi.GetStoragePermissions();
             initialize();
         }
 
@@ -26,14 +29,14 @@ namespace AndroidFileManager
             try
             {
 
-                permi.GetStoragePermissions();
+                
                 foreach (string pth in System.IO.Directory.GetDirectories("/storage/emulated/0"))
                 {
-                    listFilesDoc.Add(new MyListModel { Name = pth , Image = "/AndroidFileManager/AndroidFileManager.Android/Resources/drawable/dossier.png" });
+                    listFilesDoc.Add(new Folder(pth));
                 }
                 foreach (string pth in System.IO.Directory.GetFiles("/storage/emulated/0"))
                 {
-                    listFilesDoc.Add(new MyListModel { Name = pth, Image = "/AndroidFileManager/AndroidFileManager.Android/Resources/drawable/autre.png" });
+                    listFilesDoc.Add(new Logic.File(pth));
                 }
             }
             catch

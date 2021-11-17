@@ -3585,3 +3585,6 @@ C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Androi
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\coller_blanc.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\copier_blanc.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\AndroidFileManager.Android.csproj.CopyComplete
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\ouvrir_blanc.png
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\coller_blanc.png
+C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\copier_blanc.png
