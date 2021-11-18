@@ -58,9 +58,67 @@ namespace AndroidFileManager.Logic
                 case "":
                     image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/dossier.png";
                     break;
+
+                case ".css":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/css.png";
+                    break;
+
+                case ".xlsx":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/excel.png";
+                    break;
+
+                case ".html":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/html.png";
+                    break;
+
+                case ".jpg":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/jpg.png";
+                    break;
+
+                case ".js":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/js.png";
+                    break;
+
+                case ".mp3":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/mp3.png";
+                    break;
+
+                case ".mp4":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/mp4.png";
+                    break;
+
                 case ".pdf":
                     image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/pdf.png";
                     break;
+
+                case ".php":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/php.png";
+                    break;
+
+                case ".png":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/png.png";
+                    break;
+
+                case ".pptx":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/powerpoint.png";
+                    break;
+
+                case ".ods":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/tableur.png";
+                    break;
+
+                case ".odt":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/texte.png";
+                    break;
+
+                case ".txt":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/txt.png";
+                    break;
+
+                case ".docx":
+                    image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/word.png";
+                    break;
+
                 default:
                     image = "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/autre.png";
                     break;
