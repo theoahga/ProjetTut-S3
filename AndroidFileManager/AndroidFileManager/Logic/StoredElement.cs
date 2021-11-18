@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace AndroidFileManager.Logic
@@ -22,6 +23,25 @@ namespace AndroidFileManager.Logic
             set
             {
                 name = value;
+            }
+        }
+
+        public string ShortName
+        {
+            get
+            {
+                string shortname = "";
+                if (this.GetType() == "fichier")
+                {
+                    FileInfo a = new FileInfo(Name);
+                    shortname = a.Name;
+                }
+                else if (this.GetType() == "dossier")
+                {
+                    DirectoryInfo b = new DirectoryInfo(Name);
+                    shortname = b.Name;
+                }
+                return shortname;
             }
         }
 
@@ -71,11 +91,15 @@ namespace AndroidFileManager.Logic
 
         }
 
-        public string ShortName(StoredElement e)
+        public string GetType()
         {
-            return null;
-        } 
-
+            string p = "fichier";
+            if (Path.GetExtension(Name)=="")
+            {
+                p = "dossier";
+            }
+            return p;
+        }
 
     }
 }

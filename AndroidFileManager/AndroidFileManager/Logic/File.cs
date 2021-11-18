@@ -22,16 +22,6 @@ namespace AndroidFileManager.Logic
             }
         }
 
-        //Louis à compléter pour obtenir les extentions 
-        public string FileExtention
-        {
-            get { return null; }
-            set
-            {
-
-            }
-        }
-        //a completer en fonction de l'extension
 
     }
 }

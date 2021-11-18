@@ -32,13 +32,14 @@ namespace AndroidFileManager.Views
 
         private async void ListView_ItemSelected(object sender, SelectedPositionChangedEventArgs e)
         {
-            var storedElement = ((ListView)sender).SelectedItem as StoredElement;
-            if (storedElement == null)
+
+            if (listViewFolder.SelectedItem is StoredElement)
             {
-                return;
+                var storedElement = listViewFolder.SelectedItem as StoredElement;
+
+                await Navigation.PushAsync(new listPage(storedElement.Name));
             }
-                
-            await Navigation.PushAsync(new listPage(storedElement.Name));
+            
         }
     }
 }

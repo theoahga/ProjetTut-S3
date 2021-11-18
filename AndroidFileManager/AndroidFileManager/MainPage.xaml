@@ -19,7 +19,7 @@
             <ListView ItemsSource="{Binding listFilesDoc}"
                       HasUnevenRows="true"
                       SeparatorVisibility="None"
-                      >
+                      x:Name="listViewFolder">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
