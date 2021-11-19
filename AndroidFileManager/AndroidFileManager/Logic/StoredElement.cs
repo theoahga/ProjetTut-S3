@@ -31,12 +31,12 @@ namespace AndroidFileManager.Logic
             get
             {
                 string shortname = "";
-                if (this.GetType() == "fichier")
+                if (getType() == "fichier")
                 {
                     FileInfo a = new FileInfo(Name);
                     shortname = a.Name;
                 }
-                else if (this.GetType() == "dossier")
+                else if (getType() == "dossier")
                 {
                     DirectoryInfo b = new DirectoryInfo(Name);
                     shortname = b.Name;
@@ -149,7 +149,7 @@ namespace AndroidFileManager.Logic
 
         }
 
-        public string GetType()
+        public string getType()
         {
             string p = "fichier";
             if (Path.GetExtension(Name)=="")
