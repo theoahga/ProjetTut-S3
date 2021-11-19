@@ -40,14 +40,5 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
-        <Button BackgroundColor="#1581d4" 
-                ImageSource="ouvrir_blanc.png"
-                CornerRadius="20" 
-                AbsoluteLayout.LayoutBounds="0.97,0.98,0.15,0.08" 
-                AbsoluteLayout.LayoutFlags="All"
-                Clicked="click_open_file"/>
-
-
     </AbsoluteLayout>
 </ContentPage>

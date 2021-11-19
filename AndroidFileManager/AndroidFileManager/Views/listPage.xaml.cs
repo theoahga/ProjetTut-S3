@@ -20,11 +20,6 @@ namespace AndroidFileManager.Views
             BindingContext = new MyListViewModel(path_base);
         }
 
-        async void click_open_file(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new PageDetailDossier());
-        }
-
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs i)
         {
             ((ListView)sender).SelectedItem = null;
@@ -36,8 +31,14 @@ namespace AndroidFileManager.Views
             if (listViewFolder.SelectedItem is StoredElement)
             {
                 var storedElement = listViewFolder.SelectedItem as StoredElement;
+                if(storedElement.Type == "folder")
+                {
+                    await Navigation.PushAsync(new listPage(storedElement.Name));
+                }else if(storedElement.Type == "file")
+                {
 
-                await Navigation.PushAsync(new listPage(storedElement.Name));
+                }
+                
             }
             
         }

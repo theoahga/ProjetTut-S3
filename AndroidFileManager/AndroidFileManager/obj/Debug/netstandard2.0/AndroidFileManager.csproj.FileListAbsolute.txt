@@ -75,7 +75,6 @@ C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\Android
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.dll
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\ref\AndroidFileManager.dll
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.pdb
-C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\Views\PageDetailDossier.xaml.g.cs
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\clere\OneDrive\Documents\GitHub\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\Views\listPage.xaml.g.cs
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\bin\Debug\netstandard2.0\AndroidFileManager.deps.json
