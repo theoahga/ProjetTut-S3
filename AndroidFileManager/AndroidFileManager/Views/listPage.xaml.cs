@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace AndroidFileManager.Views
@@ -36,7 +37,7 @@ namespace AndroidFileManager.Views
                     await Navigation.PushAsync(new listPage(storedElement.Name));
                 }else if(storedElement.Type == "file")
                 {
-
+                    
                 }
                 
             }

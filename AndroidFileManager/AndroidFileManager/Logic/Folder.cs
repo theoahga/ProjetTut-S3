@@ -45,7 +45,19 @@ namespace AndroidFileManager.Logic
 
         public StoredElement[] ListFolder()
         {
-            return null;
+            List<StoredElement> e = new List<StoredElement>();
+
+            foreach (string pth in System.IO.Directory.GetDirectories(Name))
+            {
+                e.Add(new Folder(pth));
+            }
+
+            foreach (string pth in System.IO.Directory.GetFiles(Name))
+            {
+                e.Add(new Logic.File(pth));
+            }
+
+            return e.ToArray();
         }
 
         public override void Copy(StoredElement e)

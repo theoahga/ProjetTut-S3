@@ -22,5 +22,7 @@ namespace AndroidFileManager.Logic
         public abstract void  Remove(StoredElement e);
 
         public abstract string Type { get; }
+
+        
     }
 }
