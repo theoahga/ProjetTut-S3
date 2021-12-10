@@ -43,5 +43,12 @@ namespace AndroidFileManager.Views
             }
             
         }
+
+        private async void AddFolder(object sender, EventArgs e)
+        {
+            string nouveau = await DisplayPromptAsync("Nouveau dossier","Quel est le nom de votre nouveau dossier ?");
+
+            //listFilesDoc.Add(new Folder(nouveau));
+        }
     }
 }
