@@ -115,24 +115,24 @@ namespace AndroidFileManager.Logic
             return image;
         }
 
-        public override void Copy(StoredElement e)
-        {
-            throw new NotImplementedException();
-        }
 
-        public override Folder Move(StoredElement e)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Folder Paste(StoredElement e)
-        {
-            throw new NotImplementedException();
-        }
 
         public override void Remove()
         {
             System.IO.File.Delete(this.Name);
+        }
+
+        public override void Copy(string sourceDirName, string destDirName, bool copySubDirs)
+        {
+            if (copySubDirs)
+            {
+                System.IO.File.Copy(sourceDirName, destDirName);
+            }
+        }
+
+        public override void Move(string dest)
+        {
+            System.IO.File.Move(this.Name, dest);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace AndroidFileManager
             InitializeComponent();
             GetPermissions permi = new GetPermissions();
             permi.GetStoragePermissions();
-            MainPage = new NavigationPage(new listPage("/storage/emulated/0"));
+            MainPage = new NavigationPage(new listPage("/storage/emulated/0",null,null));
             
         }
 

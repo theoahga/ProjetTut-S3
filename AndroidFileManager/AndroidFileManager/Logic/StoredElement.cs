@@ -13,11 +13,9 @@ namespace AndroidFileManager.Logic
   
         public abstract string Image { get; }
 
-        public abstract void Copy();
+        public abstract void Copy(string sourceDirName, string destDirName, bool copySubDirs);
 
-        public abstract Folder Paste();
-
-        public abstract Folder Move(StoredElement e);
+        public abstract void Move(string dest);
 
         public abstract void  Remove();
 

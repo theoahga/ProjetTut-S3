@@ -60,20 +60,6 @@ namespace AndroidFileManager.Logic
             return e.ToArray();
         }
 
-        public override void Copy()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Folder Paste()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override Folder Move(StoredElement e)
-        {
-            throw new NotImplementedException();
-        }
 
         public override void Remove()
         {
@@ -99,5 +85,35 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        public override void Copy(string sourceDirName, string destDirName, bool copySubDirs)
+        {
+ 
+            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
+
+            DirectoryInfo[] dirs = dir.GetDirectories();
+   
+            Directory.CreateDirectory(destDirName);
+
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                string tempPath = Path.Combine(destDirName, file.Name);
+                file.CopyTo(tempPath, false);
+            }
+
+            if (copySubDirs)
+            {
+                foreach (DirectoryInfo subdir in dirs)
+                {
+                    string tempPath = Path.Combine(destDirName, subdir.Name);
+                    Copy(subdir.FullName, tempPath, copySubDirs);
+                }
+            }
+        }
+
+        public override void Move(string dest)
+        {
+            Directory.Move(this.Name, dest);
+        }
     }
 }
