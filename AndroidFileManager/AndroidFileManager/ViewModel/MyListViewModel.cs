@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace AndroidFileManager
 {
     public class MyListViewModel
     {
         public ObservableCollection<StoredElement> listFilesDoc { get; set; }
-        
+        public Command LongPress { get; set; }
         
 
         public MyListViewModel(string path)

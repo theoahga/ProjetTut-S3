@@ -130,9 +130,9 @@ namespace AndroidFileManager.Logic
             throw new NotImplementedException();
         }
 
-        public override void Remove(StoredElement e)
+        public override void Remove()
         {
-            throw new NotImplementedException();
+            System.IO.File.Delete(this.Name);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace AndroidFileManager.Droid.Services
 {
     public class services
     {
-        public void OpenFile(string path)
+        /*public void OpenFile(string path)
         {
             string extension = Android.Webkit.MimeTypeMap.GetFileExtensionFromUrl(Android.Net.Uri.FromFile(new Java.IO.File(path)).ToString());
             string mimeType = Android.Webkit.MimeTypeMap.Singleton.GetMimeTypeFromExtension(extension);
@@ -37,6 +37,6 @@ namespace AndroidFileManager.Droid.Services
             {
                 Toast.MakeText(context, "No application available to View PDF", ToastLength.Short).Show();
             }
-        }
+        }*/
     }
 }

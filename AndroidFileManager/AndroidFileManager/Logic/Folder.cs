@@ -60,12 +60,12 @@ namespace AndroidFileManager.Logic
             return e.ToArray();
         }
 
-        public override void Copy(StoredElement e)
+        public override void Copy()
         {
             throw new NotImplementedException();
         }
 
-        public override Folder Paste(StoredElement e)
+        public override Folder Paste()
         {
             throw new NotImplementedException();
         }
@@ -75,9 +75,28 @@ namespace AndroidFileManager.Logic
             throw new NotImplementedException();
         }
 
-        public override void Remove(StoredElement e)
+        public override void Remove()
         {
-            throw new NotImplementedException();
+                Directory.Delete(this.Name);
+        }
+
+        public void Create()
+        {
+            try
+            {
+                if (Directory.Exists(this.Name))
+                {
+                    Console.WriteLine("This file already exits!");
+                }
+                else
+                {
+                    DirectoryInfo di = Directory.CreateDirectory(this.Name);
+                }
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine("The process failed: {0}", a.ToString());
+            }
         }
 
     }

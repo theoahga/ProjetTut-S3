@@ -13,13 +13,13 @@ namespace AndroidFileManager.Logic
   
         public abstract string Image { get; }
 
-        public abstract void Copy(StoredElement e);
+        public abstract void Copy();
 
-        public abstract Folder Paste(StoredElement e);
+        public abstract Folder Paste();
 
         public abstract Folder Move(StoredElement e);
 
-        public abstract void  Remove(StoredElement e);
+        public abstract void  Remove();
 
         public abstract string Type { get; }
 

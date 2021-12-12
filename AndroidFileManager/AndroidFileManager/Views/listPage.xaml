@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="AndroidFileManager.Views.listPage"
              Title="My Android File Manager">
     
@@ -17,6 +18,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Copy" Clicked="Copyclick"/>
+                            <MenuItem Text="Delete" IsDestructive="True" Clicked="Deleteclick"/>
+                        </ViewCell.ContextActions>
                         <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -31,10 +36,13 @@
                                    Aspect="AspectFill"
                                    WidthRequest="70"
                                    Grid.RowSpan="2"
-                                   Source="{Binding Image}"/>
+                                   Source="{Binding Image}"
+                                   xct:TouchEffect.LongPressCommand="{Binding LongPress}"
+                                   xct:TouchEffect.LongPressDuration="250"/>
                             <Label Grid.Column="1"
                                        Text="{Binding ShortName}"
                                        VerticalOptions="End"/>
+                            
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
