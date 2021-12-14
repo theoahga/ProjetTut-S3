@@ -57,22 +57,29 @@ namespace AndroidFileManager.Views
 
         private async void AddFolder(object sender, EventArgs e)
         {
-            string nouveau = await DisplayPromptAsync("Nouveau dossier","Quel est le nom de votre nouveau dossier ?");
+            string nouveau = await DisplayPromptAsync("New Folder","What is the folder's name created ?");
             string path = this.actualpath + "/"+nouveau ;
             Folder newFolder = new Folder(path);
             newFolder.Create();
             BindingContext = new MyListViewModel(actualpath);
         }
 
-        private void Deleteclick(object sender, EventArgs e)
+        private async void Deleteclick(object sender, EventArgs e)
         {
-            var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
-            if (storedElement == null)
-                return;
+            bool answer = await DisplayAlert("Delete", "Do you really want to delete this element ?", "Yes", "No");
+            if(answer == true)
+            {
+                var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
+                if (storedElement == null)
+                    return;
 
-            //popup
-            storedElement.Remove();
-            BindingContext = new MyListViewModel(actualpath);
+                storedElement.Remove();
+                BindingContext = new MyListViewModel(actualpath);
+                await DisplayAlert("Alert", "The item has been deleted", "OK");
+            } else
+            {
+
+            }
         }
 
         private void copyclick(object sender, EventArgs e)
@@ -93,17 +100,19 @@ namespace AndroidFileManager.Views
             this.CheckCopy();
         }
 
-        private void copyclicked(object sender, EventArgs e)
+        private async void copyclicked(object sender, EventArgs e)
         {
-            
-            string a = this.actualpath +"/"+ this.copyElement.ShortName;
-            if(a != this.copyElement.Name)
+            bool answer = await DisplayAlert("Copy", "Do you really want to copy this element ?", "Yes", "No");
+            if (answer == true)
             {
-                //popup
-                this.copyElement.Copy(this.copyElement.Name, a, true);
-                BindingContext = new MyListViewModel(actualpath);
-                this.copyElement = null;
-                this.CheckCopy();
+                string a = this.actualpath +"/"+ this.copyElement.ShortName;
+                if(a != this.copyElement.Name)
+                { 
+                    this.copyElement.Copy(this.copyElement.Name, a, true);
+                    BindingContext = new MyListViewModel(actualpath);
+                    this.copyElement = null;
+                    this.CheckCopy();
+                }
             }
             else
             {
@@ -112,23 +121,24 @@ namespace AndroidFileManager.Views
             
         }
 
-        private void moveclicked(object sender, EventArgs e)
+        private async void moveclicked(object sender, EventArgs e)
         {
-
-            string a = this.actualpath + "/" + this.moveElement.ShortName;
-            if (a!= this.moveElement.Name)
+            bool answer = await DisplayAlert("Move", "Do you really want to move this element ?", "Yes", "No");
+            if (answer == true)
             {
-                //popup
-                this.moveElement.Move(a);
-                BindingContext = new MyListViewModel(actualpath);
-                this.moveElement = null;
-                this.CheckCopy();
+                string a = this.actualpath + "/" + this.moveElement.ShortName;
+                if (a != this.moveElement.Name)
+                {
+                    this.moveElement.Move(a);
+                    BindingContext = new MyListViewModel(actualpath);
+                    this.moveElement = null;
+                    this.CheckCopy();
+                }
+                else
+                {
+                    //popup
+                }
             }
-            else
-            {
-                //popup
-            }
-
         }
 
         private void CheckCopy()
