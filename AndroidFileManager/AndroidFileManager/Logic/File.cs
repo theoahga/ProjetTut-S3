@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Text;
 
 namespace AndroidFileManager.Logic
 {
-    [DataContract]
     public class File : StoredElement
     {
-        [DataMember] private string fileName;
+        private string fileName;
 
         public File(string n)
         {

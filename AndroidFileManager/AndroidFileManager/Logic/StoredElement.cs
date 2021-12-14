@@ -9,6 +9,7 @@ namespace AndroidFileManager.Logic
     [DataContract]
     public abstract class StoredElement
     {
+
         public abstract string Name { get; set; }
 
         public abstract string ShortName { get; }

@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Text;
 
 
 namespace AndroidFileManager.Logic
 {
-    [DataContract]
     public class Folder : StoredElement
     {
-        [DataMember]private string folderName;
+        private string folderName;
 
         public Folder(string n) 
         {

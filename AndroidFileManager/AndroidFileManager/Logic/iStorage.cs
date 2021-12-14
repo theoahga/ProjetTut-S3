@@ -7,6 +7,6 @@ namespace AndroidFileManager.Logic
     public interface iStorage
     {
         Memory Load();
-        void save(Memory m);
+        void Save(Memory m);
     }
 }

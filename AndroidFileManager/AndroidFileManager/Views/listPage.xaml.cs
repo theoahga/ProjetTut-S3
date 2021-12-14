@@ -56,7 +56,7 @@ namespace AndroidFileManager.Views
                     await Navigation.PushAsync(new listPage(storedElement.Name));
                 }else if(storedElement.Type == "file")
                 {
-                    
+                    //Open file ...
                 }
                 
             }
@@ -78,19 +78,16 @@ namespace AndroidFileManager.Views
         // Item Menu : delete
         private async void Deleteclick(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Delete", "Do you really want to delete this element ?", "Yes", "No");
+            var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
+            bool answer = await DisplayAlert("Delete", "Do you really want to delete "+storedElement.Type+" : "+ storedElement.ShortName+ " ?", "Yes", "No");
             if(answer == true)
             {
-                var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
                 if (storedElement == null)
                     return;
 
                 storedElement.Remove();
                 BindingContext = new MyListViewModel(actualpath);
                 await DisplayAlert("Alert", "The item has been deleted", "OK");
-            } else
-            {
-
             }
         }
 
@@ -104,8 +101,8 @@ namespace AndroidFileManager.Views
                 return;
 
             // Save copyElement in storage
-            this.data.CopyElementPath = storedElement;
-            this.storage.save(this.data);
+            this.data.CopyElementPath = storedElement.Name;
+            this.storage.Save(this.data);
 
             // Button Refresh
             this.CheckCopy();
@@ -121,8 +118,8 @@ namespace AndroidFileManager.Views
                 return;
 
             // Save copyElement in storage
-            this.data.MoveElementPath = storedElement;
-            this.storage.save(this.data);
+            this.data.MoveElementPath = storedElement.Name;
+            this.storage.Save(this.data);
 
             // Button Refresh
             this.CheckCopy();
@@ -132,11 +129,20 @@ namespace AndroidFileManager.Views
         // On button copy 
         private async void copyclicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Copy", "Do you really want to copy this element ?", "Yes", "No");
+            // Value recovery
+            StoredElement copyElement;
+            if (System.IO.Path.GetExtension(this.data.CopyElementPath) == "")
+            {
+                copyElement = new Folder(this.data.CopyElementPath);
+            }
+            else
+            {
+                copyElement = new Logic.File(this.data.CopyElementPath);
+            }
+
+            bool answer = await DisplayAlert("Copy", "Do you really want to copy " + copyElement.Type + " : " + copyElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
-                // Value recovery
-                StoredElement copyElement = this.data.CopyElementPath;
 
                 // New string to dest path
                 string a = this.actualpath +"/"+ copyElement.ShortName;
@@ -148,7 +154,7 @@ namespace AndroidFileManager.Views
 
                     // Reset Value
                     this.data.CopyElementPath = null;
-                    this.storage.save(data);
+                    this.storage.Save(data);
 
                     // Refresh page & button
                     BindingContext = new MyListViewModel(actualpath);
@@ -167,11 +173,20 @@ namespace AndroidFileManager.Views
         // On button move
         private async void moveclicked(object sender, EventArgs e)
         {
-            bool answer = await DisplayAlert("Move", "Do you really want to move this element ?", "Yes", "No");
+            // Value recovery
+            StoredElement moveElement;
+            if (System.IO.Path.GetExtension(this.data.CopyElementPath) == "")
+            {
+                moveElement = new Folder(this.data.MoveElementPath);
+            }
+            else
+            {
+                moveElement = new Logic.File(this.data.MoveElementPath);
+            }
+
+            bool answer = await DisplayAlert("Move", "Do you really want to move " + moveElement.Type + " : " + moveElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
-                // Value recovery
-                StoredElement moveElement = this.data.MoveElementPath;
 
                 string a = this.actualpath + "/" + moveElement.ShortName;
                 if (a != moveElement.Name)
@@ -180,7 +195,7 @@ namespace AndroidFileManager.Views
 
                     // Reset Value
                     this.data.MoveElementPath = null;
-                    this.storage.save(data);
+                    this.storage.Save(data);
 
                     // Refresh page & button
                     BindingContext = new MyListViewModel(actualpath);

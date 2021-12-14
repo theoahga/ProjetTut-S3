@@ -16,7 +16,7 @@ namespace AndroidFileManager.Storage
         }
         
 
-        public void save(Memory m)
+        public void Save(Memory m)
         {
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Memory));
 
@@ -26,7 +26,7 @@ namespace AndroidFileManager.Storage
             }
         }
 
-        Memory iStorage.Load()
+        public Memory Load()
         {
             Memory memory = null;
             try

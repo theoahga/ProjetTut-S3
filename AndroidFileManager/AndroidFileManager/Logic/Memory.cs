@@ -8,8 +8,8 @@ namespace AndroidFileManager.Logic
     [DataContract]
     public class Memory
     {
-        [DataMember]private StoredElement copyElementPath;
-        [DataMember]private StoredElement moveElementPath;
+        [DataMember]private string copyElementPath;
+        [DataMember]private string moveElementPath;
 
 
         public Memory()
@@ -18,7 +18,7 @@ namespace AndroidFileManager.Logic
             this.moveElementPath = null;
         }
 
-        public StoredElement CopyElementPath
+        public string CopyElementPath
         {
             get { return this.copyElementPath; }
             set
@@ -27,7 +27,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
-        public StoredElement MoveElementPath
+        public string MoveElementPath
         {
             get { return this.moveElementPath; }
             set

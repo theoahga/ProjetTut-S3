@@ -1,4 +1,6 @@
 ﻿using AndroidFileManager.Data;
+using AndroidFileManager.Logic;
+using AndroidFileManager.Storage;
 using AndroidFileManager.Views;
 using System;
 using Xamarin.Forms;
@@ -13,6 +15,9 @@ namespace AndroidFileManager
             InitializeComponent();
             GetPermissions permi = new GetPermissions();
             permi.GetStoragePermissions();
+            JsonStorage storage = new JsonStorage("/storage/emulated/0/data.json");
+            Memory data = new Memory();
+            storage.Save(data);
             MainPage = new NavigationPage(new listPage("/storage/emulated/0"));
             
         }
