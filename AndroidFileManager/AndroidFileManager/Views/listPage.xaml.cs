@@ -1,4 +1,5 @@
 ﻿using AndroidFileManager.Logic;
+using AndroidFileManager.Storage;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,25 +19,32 @@ namespace AndroidFileManager.Views
     public partial class listPage : ContentPage
     {
         private string actualpath;
-        private StoredElement copyElement = null;
-        private StoredElement moveElement = null;
-        public listPage(string path_base, StoredElement elt, StoredElement elt2)
+        private Memory data;
+        private iStorage storage;
+        public listPage(string path_base)
         {
             InitializeComponent();
-            this.actualpath = path_base;
-            this.copyElement = elt;
-            this.moveElement = elt2;
-            this.CheckCopy();
-            MyListViewModel a = new MyListViewModel(path_base);
-            BindingContext = a;
-           
+            this.actualpath = path_base;          
         }
 
+        // Load and refresh the page
+        public void initialize()
+        {
+            this.storage = new JsonStorage("/storage/emulated/0/data.json");
+            this.data = this.storage.Load();
+            this.CheckCopy();
+            MyListViewModel a = new MyListViewModel(this.actualpath);
+            BindingContext = a;
+        }
+
+        // Set the selected background to unvisible
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs i)
         {
             ((ListView)sender).SelectedItem = null;
         }
 
+
+        // Open new page when you click on a listview element 
         private async void ListView_ItemSelected(object sender, SelectedPositionChangedEventArgs e)
         {
 
@@ -45,7 +53,7 @@ namespace AndroidFileManager.Views
                 var storedElement = listViewFolder.SelectedItem as StoredElement;
                 if(storedElement.Type == "folder")
                 {
-                    await Navigation.PushAsync(new listPage(storedElement.Name,this.copyElement,this.moveElement));
+                    await Navigation.PushAsync(new listPage(storedElement.Name));
                 }else if(storedElement.Type == "file")
                 {
                     
@@ -54,7 +62,9 @@ namespace AndroidFileManager.Views
             }
             
         }
+        
 
+        // Button addFolder
         private async void AddFolder(object sender, EventArgs e)
         {
             string nouveau = await DisplayPromptAsync("New Folder","What is the folder's name created ?");
@@ -64,6 +74,8 @@ namespace AndroidFileManager.Views
             BindingContext = new MyListViewModel(actualpath);
         }
 
+
+        // Item Menu : delete
         private async void Deleteclick(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Delete", "Do you really want to delete this element ?", "Yes", "No");
@@ -82,68 +94,113 @@ namespace AndroidFileManager.Views
             }
         }
 
+
+        // Item Menu : copy
         private void copyclick(object sender, EventArgs e)
         {
+            // Value recovery 
             var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
             if (storedElement == null)
                 return;
-            this.copyElement = storedElement;
+
+            // Save copyElement in storage
+            this.data.CopyElementPath = storedElement;
+            this.storage.save(this.data);
+
+            // Button Refresh
             this.CheckCopy();
         }
 
+
+        // Item Menu : move
         private void moveclick(object sender, EventArgs e)
         {
+            // Value recovery
             var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
             if (storedElement == null)
                 return;
-            this.moveElement = storedElement;
+
+            // Save copyElement in storage
+            this.data.MoveElementPath = storedElement;
+            this.storage.save(this.data);
+
+            // Button Refresh
             this.CheckCopy();
         }
 
+
+        // On button copy 
         private async void copyclicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Copy", "Do you really want to copy this element ?", "Yes", "No");
             if (answer == true)
             {
-                string a = this.actualpath +"/"+ this.copyElement.ShortName;
-                if(a != this.copyElement.Name)
+                // Value recovery
+                StoredElement copyElement = this.data.CopyElementPath;
+
+                // New string to dest path
+                string a = this.actualpath +"/"+ copyElement.ShortName;
+                if(a != copyElement.Name)
                 { 
-                    this.copyElement.Copy(this.copyElement.Name, a, true);
+                    
+                    copyElement.Copy(copyElement.Name, a, true);
+                    
+
+                    // Reset Value
+                    this.data.CopyElementPath = null;
+                    this.storage.save(data);
+
+                    // Refresh page & button
                     BindingContext = new MyListViewModel(actualpath);
-                    this.copyElement = null;
                     this.CheckCopy();
                 }
+                else
+                {
+                    //popup : fichier/dossier déja existant dans ce chemin
+                }
             }
-            else
-            {
-                //popup
-            }
+            
             
         }
 
+
+        // On button move
         private async void moveclicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Move", "Do you really want to move this element ?", "Yes", "No");
             if (answer == true)
             {
-                string a = this.actualpath + "/" + this.moveElement.ShortName;
-                if (a != this.moveElement.Name)
+                // Value recovery
+                StoredElement moveElement = this.data.MoveElementPath;
+
+                string a = this.actualpath + "/" + moveElement.ShortName;
+                if (a != moveElement.Name)
                 {
-                    this.moveElement.Move(a);
+                    moveElement.Move(a);
+
+                    // Reset Value
+                    this.data.MoveElementPath = null;
+                    this.storage.save(data);
+
+                    // Refresh page & button
                     BindingContext = new MyListViewModel(actualpath);
-                    this.moveElement = null;
                     this.CheckCopy();
                 }
+
+
+                // Exception to manage : move a rootfolder in a folder in this first folder.
+
                 else
                 {
-                    //popup
+                    //popup: Vous ne pouvez pas déplacer une élément dans le même répertoire;
                 }
             }
         }
 
+        // Check if copyElement and moveElement == null to update btn.
         private void CheckCopy()
         {
-            if(this.copyElement == null)
+            if(this.data.CopyElementPath == null)
             {
                 this.copybtn.IsVisible = false;
             }
@@ -152,7 +209,7 @@ namespace AndroidFileManager.Views
                 this.copybtn.IsVisible = true;
             }
 
-            if (this.moveElement == null)
+            if (this.data.MoveElementPath == null)
             {
                 this.movebtn.IsVisible = false;
             }
@@ -160,6 +217,14 @@ namespace AndroidFileManager.Views
             {
                 this.movebtn.IsVisible = true;
             }
+        }
+
+
+        // This function allows to refresh previous pages
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            initialize();
         }
     }
 }
