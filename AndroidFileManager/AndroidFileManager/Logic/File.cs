@@ -127,6 +127,7 @@ namespace AndroidFileManager.Logic
             if (copySubDirs)
             {
                 System.IO.File.Copy(sourceDirName, destDirName);
+               
             }
         }
 

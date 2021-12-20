@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
@@ -30,7 +30,8 @@ namespace AndroidFileManager.Views
         // Load and refresh the page
         public void initialize()
         {
-            this.storage = new JsonStorage("/storage/emulated/0/data.json");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/data.json";
+            this.storage = new JsonStorage(path);
             this.data = this.storage.Load();
             this.CheckCopy();
             MyListViewModel a = new MyListViewModel(this.actualpath);
@@ -56,7 +57,10 @@ namespace AndroidFileManager.Views
                     await Navigation.PushAsync(new listPage(storedElement.Name));
                 }else if(storedElement.Type == "file")
                 {
-                    //Open file ...
+                    await Launcher.OpenAsync(new OpenFileRequest
+                    {
+                        File = new ReadOnlyFile(storedElement.Name)
+                    });
                 }
                 
             }
@@ -67,11 +71,19 @@ namespace AndroidFileManager.Views
         // Button addFolder
         private async void AddFolder(object sender, EventArgs e)
         {
-            string nouveau = await DisplayPromptAsync("New Folder","What is the folder's name created ?");
-            string path = this.actualpath + "/"+nouveau ;
-            Folder newFolder = new Folder(path);
-            newFolder.Create();
-            BindingContext = new MyListViewModel(actualpath);
+            try
+            {
+                string nouveau = await DisplayPromptAsync("New Folder", "What is the folder's name created ?");
+                string path = this.actualpath + "/" + nouveau;
+                Folder newFolder = new Folder(path);
+                newFolder.Create();
+                BindingContext = new MyListViewModel(actualpath);
+            }
+            catch (Exception except)
+            {
+                //popup : error
+                await DisplayAlert("Alert", "Error:" + except.Message, "OK");
+            }
         }
 
 
@@ -80,14 +92,22 @@ namespace AndroidFileManager.Views
         {
             var storedElement = ((MenuItem)sender).BindingContext as StoredElement;
             bool answer = await DisplayAlert("Delete", "Do you really want to delete "+storedElement.Type+" : "+ storedElement.ShortName+ " ?", "Yes", "No");
-            if(answer == true)
+            try
             {
-                if (storedElement == null)
-                    return;
+                if (answer == true)
+                {
+                    if (storedElement == null)
+                        return;
 
-                storedElement.Remove();
-                BindingContext = new MyListViewModel(actualpath);
-                await DisplayAlert("Alert", "The item has been deleted", "OK");
+                    storedElement.Remove();
+                    BindingContext = new MyListViewModel(actualpath);
+                    await DisplayAlert("Alert", "The item has been deleted", "OK");
+                }
+            }
+            catch (Exception except)
+            {
+                //popup : error
+                await DisplayAlert("Alert", "Error:" + except.Message, "OK");
             }
         }
 
@@ -143,30 +163,30 @@ namespace AndroidFileManager.Views
             bool answer = await DisplayAlert("Copy", "Do you really want to copy " + copyElement.Type + " : " + copyElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
-
-                // New string to dest path
-                string a = this.actualpath +"/"+ copyElement.ShortName;
-                if(a != copyElement.Name)
-                { 
-                    
-                    copyElement.Copy(copyElement.Name, a, true);
-                    
-
-                    // Reset Value
-                    this.data.CopyElementPath = null;
-                    this.storage.Save(data);
-
-                    // Refresh page & button
-                    BindingContext = new MyListViewModel(actualpath);
-                    this.CheckCopy();
-                }
-                else
+                try
                 {
-                    //popup : fichier/dossier déja existant dans ce chemin
-                }
+                    // New string to dest path
+                    string a = this.actualpath + "/" + copyElement.ShortName;
+                    if (a != copyElement.Name)
+                    {
+
+                        copyElement.Copy(copyElement.Name, a, true);
+
+
+                        // Reset Value
+                        this.data.CopyElementPath = null;
+                        this.storage.Save(data);
+
+                        // Refresh page & button
+                        BindingContext = new MyListViewModel(actualpath);
+                        this.CheckCopy();
+                    }
+                }catch(Exception except)
+                {
+                    //popup : error
+                    await DisplayAlert("Alert", "Error:"+except.Message, "OK");
+                }   
             }
-            
-            
         }
 
 
@@ -187,28 +207,29 @@ namespace AndroidFileManager.Views
             bool answer = await DisplayAlert("Move", "Do you really want to move " + moveElement.Type + " : " + moveElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
-
-                string a = this.actualpath + "/" + moveElement.ShortName;
-                if (a != moveElement.Name)
+                try
                 {
-                    moveElement.Move(a);
+                    string a = this.actualpath + "/" + moveElement.ShortName;
+                    if (a != moveElement.Name)
+                    {
+                        moveElement.Move(a);
 
-                    // Reset Value
-                    this.data.MoveElementPath = null;
-                    this.storage.Save(data);
+                        // Reset Value
+                        this.data.MoveElementPath = null;
+                        this.storage.Save(data);
 
-                    // Refresh page & button
-                    BindingContext = new MyListViewModel(actualpath);
-                    this.CheckCopy();
+                        // Refresh page & button
+                        BindingContext = new MyListViewModel(actualpath);
+                        this.CheckCopy();
+                    }
                 }
-
-
-                // Exception to manage : move a rootfolder in a folder in this first folder.
-
-                else
+                catch(Exception except)
                 {
-                    //popup: Vous ne pouvez pas déplacer une élément dans le même répertoire;
+                    //popup : error
+                    await DisplayAlert("Alert", "Error:" + except.Message, "OK");
                 }
+                
+
             }
         }
 

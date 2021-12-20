@@ -19,9 +19,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.ContextActions>
-                            <MenuItem Text="Move" Clicked="moveclick"/>
-                            <MenuItem Text="Copy" Clicked="copyclick"/>
-                            <MenuItem Text="Delete" IsDestructive="True" Clicked="Deleteclick"/>
+                            <MenuItem Text="Move" Clicked="moveclick" IconImageSource="transfer.png"/>
+                            <MenuItem Text="Copy" Clicked="copyclick" IconImageSource="copier_blanc.png"/>
+                            <MenuItem Text="Delete" IsDestructive="True" Clicked="Deleteclick" IconImageSource="supprimer_blanc.png"/>
                         </ViewCell.ContextActions>
                         <Grid Padding="10" RowSpacing="10" ColumnSpacing="10">
                             <Grid.RowDefinitions>
@@ -52,7 +52,7 @@
         <Button x:Name ="copybtn"
                 BackgroundColor="DodgerBlue"
                 CornerRadius="60" 
-                AbsoluteLayout.LayoutBounds="0.99,0.85,0.2,0.1" 
+                AbsoluteLayout.LayoutBounds="0.99,0.84,0.2,0.12" 
                 AbsoluteLayout.LayoutFlags="All"
                 ImageSource="copier_blanc.png"
                 Clicked="copyclicked">
@@ -60,15 +60,15 @@
         <Button x:Name ="movebtn"
                 BackgroundColor="DodgerBlue"
                 CornerRadius="60" 
-                AbsoluteLayout.LayoutBounds="0.99,0.85,0.2,0.1" 
+                AbsoluteLayout.LayoutBounds="0.99,0.84,0.2,0.12" 
                 AbsoluteLayout.LayoutFlags="All"
-                ImageSource="annuler_blanc.png"
+                ImageSource="transfer.png"
                 Clicked="moveclicked">
         </Button>
         <Button x:Name ="addbtn"
                 BackgroundColor="DodgerBlue"
-                CornerRadius="40"
-                AbsoluteLayout.LayoutBounds="0.99,0.99,0.2,0.1" 
+                CornerRadius="60"
+                AbsoluteLayout.LayoutBounds="0.99,0.99,0.2,0.12" 
                 AbsoluteLayout.LayoutFlags="All"
                 ImageSource="ajouter_blanc.png"
                 Clicked="AddFolder">

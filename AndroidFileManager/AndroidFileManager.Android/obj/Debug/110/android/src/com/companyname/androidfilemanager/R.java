@@ -6546,8 +6546,9 @@ public final class R {
     public static final int texte=0x7f0700a2;
     public static final int tooltip_frame_dark=0x7f0700a3;
     public static final int tooltip_frame_light=0x7f0700a4;
-    public static final int txt=0x7f0700a5;
-    public static final int word=0x7f0700a6;
+    public static final int transfer=0x7f0700a5;
+    public static final int txt=0x7f0700a6;
+    public static final int word=0x7f0700a7;
   }
   public static final class id {
     public static final int ALT=0x7f080000;
@@ -7024,9 +7025,12 @@ public final class R {
     public static final int toolbar=0x7f0b0073;
   }
   public static final class mipmap {
-    public static final int icon=0x7f0c0000;
-    public static final int icon_round=0x7f0c0001;
-    public static final int launcher_foreground=0x7f0c0002;
+    public static final int ic_launcher=0x7f0c0000;
+    public static final int ic_launcher_adaptive_back=0x7f0c0001;
+    public static final int ic_launcher_adaptive_fore=0x7f0c0002;
+    public static final int icon=0x7f0c0003;
+    public static final int icon_round=0x7f0c0004;
+    public static final int launcher_foreground=0x7f0c0005;
   }
   public static final class plurals {
     public static final int mtrl_badge_content_description=0x7f0d0000;

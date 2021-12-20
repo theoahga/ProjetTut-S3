@@ -15,7 +15,8 @@ namespace AndroidFileManager
             InitializeComponent();
             GetPermissions permi = new GetPermissions();
             permi.GetStoragePermissions();
-            JsonStorage storage = new JsonStorage("/storage/emulated/0/data.json");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/data.json";
+            JsonStorage storage = new JsonStorage(path);
             Memory data = new Memory();
             storage.Save(data);
             MainPage = new NavigationPage(new listPage("/storage/emulated/0"));
