@@ -101,7 +101,7 @@ namespace AndroidFileManager.Views
 
                     storedElement.Remove();
                     BindingContext = new MyListViewModel(actualpath);
-                    await DisplayAlert("Alert", "The item has been deleted", "OK");
+                    await DisplayAlert("Information !", "The item has been deleted", "OK");
                 }
             }
             catch (Exception except)
@@ -125,6 +125,8 @@ namespace AndroidFileManager.Views
             this.storage.Save(this.data);
 
             // Button Refresh
+            this.data.MoveElementPath = null;
+            this.storage.Save(this.data);
             this.CheckCopy();
         }
 
@@ -142,7 +144,10 @@ namespace AndroidFileManager.Views
             this.storage.Save(this.data);
 
             // Button Refresh
+            this.data.CopyElementPath = null;
+            this.storage.Save(this.data);
             this.CheckCopy();
+
         }
 
 
@@ -169,9 +174,8 @@ namespace AndroidFileManager.Views
                     string a = this.actualpath + "/" + copyElement.ShortName;
                     if (a != copyElement.Name)
                     {
-
                         copyElement.Copy(copyElement.Name, a, true);
-
+                        await DisplayAlert("Alert", "The item has been copied", "OK");
 
                         // Reset Value
                         this.data.CopyElementPath = null;
@@ -184,7 +188,7 @@ namespace AndroidFileManager.Views
                 }catch(Exception except)
                 {
                     //popup : error
-                    await DisplayAlert("Alert", "Error:"+except.Message, "OK");
+                    await DisplayAlert("Information !", "Error:"+except.Message, "OK");
                 }   
             }
         }
@@ -213,6 +217,7 @@ namespace AndroidFileManager.Views
                     if (a != moveElement.Name)
                     {
                         moveElement.Move(a);
+                        await DisplayAlert("Information !", "The item has been moved", "OK");
 
                         // Reset Value
                         this.data.MoveElementPath = null;

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ai/ra0n0B0vTJ+qKA0gium+65t+tihwrDqWsayfyit176fJlwNrsS8R11sVpuq5JTHyI+VxqNeF8w+JZQn8tlg==",
+  "dgSpecHash": "ehjBjTcbUBAUArwiLT9tiKrg61Ur6X8N3XxYVOf1DS/XwvY37loSJM7wAm89LAHgniPVA5/YMIJShA9lQnl8Bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\clere\\OneDrive\\Documents\\GitHub\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
+  "projectFilePath": "C:\\Users\\louis\\Desktop\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.Android\\AndroidFileManager.Android.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\clere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation.experimental\\1.0.0.8\\xamarin.androidx.annotation.experimental.1.0.0.8.nupkg.sha512",
@@ -49,7 +49,7 @@
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.versionedparcelable\\1.1.1.6\\xamarin.androidx.versionedparcelable.1.1.1.6.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager\\1.0.0.6\\xamarin.androidx.viewpager.1.0.0.6.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.viewpager2\\1.0.0.8\\xamarin.androidx.viewpager2.1.0.0.8.nupkg.sha512",
-    "C:\\Users\\clere\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.google.android.material\\1.2.1.1\\xamarin.google.android.material.1.2.1.1.nupkg.sha512",
