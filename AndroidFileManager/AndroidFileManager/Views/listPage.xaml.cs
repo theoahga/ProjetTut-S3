@@ -21,10 +21,20 @@ namespace AndroidFileManager.Views
         private string actualpath;
         private Memory data;
         private iStorage storage;
+        private bool inCharge;
+
+        //Builder for the class
         public listPage(string path_base)
         {
             InitializeComponent();
             this.actualpath = path_base;          
+        }
+
+        // Property for the attribute inCharge
+        public bool InCharge
+        {
+            get { return inCharge; }
+            set { inCharge = value; OnPropertyChanged(); }
         }
 
         // Load and refresh the page
@@ -168,6 +178,7 @@ namespace AndroidFileManager.Views
             bool answer = await DisplayAlert("Copy", "Do you really want to copy " + copyElement.Type + " : " + copyElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
+                inCharge = true;
                 try
                 {
                     // New string to dest path
@@ -189,7 +200,9 @@ namespace AndroidFileManager.Views
                 {
                     //popup : error
                     await DisplayAlert("Information !", "Error:"+except.Message, "OK");
-                }   
+                }
+
+                inCharge = false;
             }
         }
 
@@ -211,6 +224,7 @@ namespace AndroidFileManager.Views
             bool answer = await DisplayAlert("Move", "Do you really want to move " + moveElement.Type + " : " + moveElement.ShortName + " ?", "Yes", "No");
             if (answer == true)
             {
+                inCharge = true;
                 try
                 {
                     string a = this.actualpath + "/" + moveElement.ShortName;
@@ -233,8 +247,8 @@ namespace AndroidFileManager.Views
                     //popup : error
                     await DisplayAlert("Alert", "Error:" + except.Message, "OK");
                 }
-                
 
+                inCharge = false;
             }
         }
 

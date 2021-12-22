@@ -4252,3 +4252,4 @@ C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Androi
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\mipmap-xxxhdpi\ic_launcher_adaptive_back.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\mipmap-xxxhdpi\ic_launcher_adaptive_fore.png
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\res\drawable\transfer.png
+C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager.Android\obj\Debug\110\AndroidFileManager.Android.csproj.CopyComplete

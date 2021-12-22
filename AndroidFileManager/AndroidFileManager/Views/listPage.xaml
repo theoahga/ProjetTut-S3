@@ -7,6 +7,8 @@
     
     <AbsoluteLayout>
         <Label x:Name="label1"/>
+        <ActivityIndicator IsRunning="{Binding inCharge}" 
+                           IsVisible="{Binding inCharge}"/>
         <ListView ItemsSource="{Binding listFilesDoc}"
                       HasUnevenRows="true"
                       SeparatorVisibility="None"

@@ -83,7 +83,6 @@ C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\bin\De
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.csproj.AssemblyReference.cache
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\Views\listPage.xaml.g.cs
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.AssemblyInfoInputs.cache
 C:\Users\louis\Desktop\ProjetTut-S3\AndroidFileManager\AndroidFileManager\obj\Debug\netstandard2.0\AndroidFileManager.AssemblyInfo.cs
