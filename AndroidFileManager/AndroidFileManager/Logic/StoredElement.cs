@@ -6,6 +6,7 @@ using System.Text;
 
 namespace AndroidFileManager.Logic
 {
+    // This abstract class is the model of stored Element (File or Folder)
     [DataContract]
     public abstract class StoredElement
     {

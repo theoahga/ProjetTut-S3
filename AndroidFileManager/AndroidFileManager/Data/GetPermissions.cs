@@ -5,10 +5,8 @@ using Xamarin.Essentials;
 
 namespace AndroidFileManager.Data
 {
-    /// <summary>
-    /// Function to check if the user has authorized the application to access the storage of his phone
-    /// If the user has not given their authorization, the application cannot be used
-    /// </summary>
+    // Function to check if the user has authorized the application to access the storage of his phone
+    // If the user has not given their authorization, the application cannot be used
     public class GetPermissions
     {
         public async void GetStoragePermissions()

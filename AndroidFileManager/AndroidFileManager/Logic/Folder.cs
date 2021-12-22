@@ -6,16 +6,19 @@ using System.Text;
 
 namespace AndroidFileManager.Logic
 {
+    // This class extends from the class StoredElement 
     public class Folder : StoredElement
     {
+        // Attribute
         private string folderName;
 
+        // The Folder class constructor
         public Folder(string n) 
         {
             folderName = n;
         }
 
-
+        // The Name property (Long Path)
         public override string Name 
         {
             get { return folderName; }
@@ -25,6 +28,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // The Name property (Short Path)
         public override string ShortName
         {
             get 
@@ -34,16 +38,20 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // This function return the image path of a folder
         public override string Image
         {
             get { return "AndroidFileManager/AndroidFileManager.Android/Resources/drawable/dossier.png"; }
         }
 
+        // This function return the type of this StoredElement
         public override string Type
         {
             get { return "folder"; }
         }
 
+
+        // This function return the list of folders and files in the actual folder
         public StoredElement[] ListFolder()
         {
             List<StoredElement> e = new List<StoredElement>();
@@ -61,12 +69,13 @@ namespace AndroidFileManager.Logic
             return e.ToArray();
         }
 
-
+        // This function allows you to delete in cascade this actual folder
         public override void Remove()
         {
                 Directory.Delete(this.Name);
         }
 
+        // This function allows to create in phone internal folders this Folder object
         public void Create()
         {
             try
@@ -86,6 +95,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // This function allows to copy a folder(with all its content) in a other folder
         public override void Copy(string sourceDirName, string destDirName, bool copySubDirs)
         {
  
@@ -112,6 +122,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // This function allows to move this actual folder(with all its content) in a other folder
         public override void Move(string dest)
         {
             Directory.Move(this.Name, dest);

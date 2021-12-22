@@ -5,15 +5,19 @@ using System.Text;
 
 namespace AndroidFileManager.Logic
 {
+    // This class extends from the class StoredElement 
     public class File : StoredElement
     {
+        // Attribute
         private string fileName;
 
+        // The File class constructor
         public File(string n)
         {
             fileName = n;
         }
 
+        // The Name property (Long Path)
         public override string Name
         {
             get { return fileName; }
@@ -23,6 +27,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // The Name property (Short Path)
         public override string ShortName
         {
             get 
@@ -31,17 +36,20 @@ namespace AndroidFileManager.Logic
                 return  a.Name;
             }
         }
-        
+
+        // This function return the type of this StoredElement
         public override string Type 
         {
             get { return "file"; }
         }
 
+        // This function return the image path of this file depending the extension
         public override string Image
         {
             get { return getImage(); }
         }
 
+        // This function allows to give the right image depending the extension
         public string getImage()
         {
             string ext = System.IO.Path.GetExtension(Name);
@@ -116,12 +124,13 @@ namespace AndroidFileManager.Logic
         }
 
 
-
+        // This function allows you to delete this actual file
         public override void Remove()
         {
             System.IO.File.Delete(this.Name);
         }
 
+        // This function allows to create in phone internal folders this file object
         public override void Copy(string sourceDirName, string destDirName, bool copySubDirs)
         {
             if (copySubDirs)
@@ -131,6 +140,7 @@ namespace AndroidFileManager.Logic
             }
         }
 
+        // This function allows to move this actual file in a other folder
         public override void Move(string dest)
         {
             System.IO.File.Move(this.Name, dest);
