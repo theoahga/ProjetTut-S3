@@ -72,7 +72,7 @@ namespace AndroidFileManager.Logic
         // This function allows you to delete in cascade this actual folder
         public override void Remove()
         {
-                Directory.Delete(this.Name);
+                Directory.Delete(this.Name,true);
         }
 
         // This function allows to create in phone internal folders this Folder object

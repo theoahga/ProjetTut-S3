@@ -212,7 +212,7 @@ namespace AndroidFileManager.Views
         {
             // Value recovery
             StoredElement moveElement;
-            if (System.IO.Path.GetExtension(this.data.CopyElementPath) == "")
+            if (System.IO.Path.GetExtension(this.data.CopyElementPath) == null)
             {
                 moveElement = new Folder(this.data.MoveElementPath);
             }

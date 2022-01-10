@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "KmW8YfACI/fcQxJJ0Bj8e2Bna4EIpFv3+ZpxGZQ97wM99zhQGnQDRjHkHlbu6pMM3v9L/+7cmVQ2uMyOI2YeAw==",
+  "dgSpecHash": "jookji9DY5+a4zRFIZrfL1TGcZOMIzM+T3eljQ89pVv0RkyM0qDniIXGkHyUBRNrS00IGZ3Ews6K5K+GPSQVlg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\louis\\Desktop\\ProjetTut-S3\\AndroidFileManager\\AndroidFileManager.iOS\\AndroidFileManager.iOS.csproj",
+  "projectFilePath": "C:\\Users\\clere\\Desktop\\j\\AndroidFileManager\\AndroidFileManager.iOS\\AndroidFileManager.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\louis\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\louis\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
+    "C:\\Users\\clere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\clere\\.nuget\\packages\\xamarin.communitytoolkit\\1.0.1\\xamarin.communitytoolkit.1.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
